@@ -39,7 +39,7 @@ I have some scripts that can be used remotely
 ### Windows: Setup
 
 ```powershell
-&powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/cethien/win-home/main/setup.ps1'))) <parameters>"
+&powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/cethien/dotfiles-and-scripts/win/scripts/setup.ps1'))) <parameters>"
 ```
 
 | Parameter    | Description                             |
@@ -54,5 +54,5 @@ I have some scripts that can be used remotely
 ### Debian: Setup
 
 ```bash
-    curl -fs https://raw.githubusercontent.com/cethien/ubuntu-home/main/scripts/setup.sh | bash -s
+    curl -fs https://raw.githubusercontent.com/cethien/dotfiles-and-scripts/wsl-deb/scripts/setup.sh | bash -s
 ```
