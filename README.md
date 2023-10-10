@@ -2,44 +2,40 @@
 
 i'm a nerd :nerd_face:
 
-## justfile
+## Stuff
 
-i have some commands
-check with
+### justfiles
+
+each home dir has a justfile.
+
+Check out list of commands with:
 
 ```sh
-    just
+just
 ```
 
-## Scripts
+## Windows
 
-### Windows: Create folder backup
+### Update
 
-useful script for backing up folders
-
-(optional): create `.backupignore` file:
-
-```plaintext
-folder1\
-folder2\
-config.ini
-```
-
-1. create a environment variable `BACKUP`
-2. create script for backing up:
+prepare `.wingetupdate` file
 
 ```powershell
-iwr $env:USERPROFILE/scripts/create-folder-backup.ps1 | iex
+. "$env:USERPROFILE/scripts/update.ps1"
 ```
 
-## Remote Scripts
-
-I have some scripts that can be used remotely
-
-### Windows: Setup
+### Setup
 
 ```powershell
-&powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/cethien/dotfiles-and-scripts/win/scripts/setup.ps1'))) <parameters>"
+git init
+git remote add origin git@github.com:cethien/dotfiles-and-scripts.git
+git fetch
+git reset --hard origin/win
+git pull --set-upstream origin win
+```
+
+```powershell
+. "$env:USERPROFILE/scripts/setup.ps1" <parmeters>
 ```
 
 | Parameter    | Description                             |
@@ -51,8 +47,37 @@ I have some scripts that can be used remotely
 | -Gaming      | games & launchers                       |
 | -Streaming   | streaming stuff                         |
 
-### Debian: Setup
+### Create folder backup
+
+useful script for backing up folders
+
+1. create a environment variable `BACKUP`
+2. create script for backing up:
+
+```powershell
+. $env:USERPROFILE/scripts/create-folder-backup.ps1
+```
+
+(optional): create `.backupignore` file:
+
+```plaintext
+folder1\
+folder2\
+config.ini
+```
+
+## WSL Debian
+
+### Setup
 
 ```bash
-    curl -fs https://raw.githubusercontent.com/cethien/dotfiles-and-scripts/wsl-deb/scripts/setup.sh | bash -s
+git init
+git remote add origin git@github.com:cethien/dotfiles-and-scripts.git
+git fetch
+git reset --hard origin/wsl-deb
+git pull --set-upstream origin wsl-deb
+```
+
+```powershell
+. ~/scripts/setup.sh
 ```
