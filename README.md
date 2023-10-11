@@ -76,3 +76,5 @@ git pull --set-upstream origin wsl-deb
 
 . $HOME/scripts/setup.sh
 ```
+
+dont forget to set git username and email for repo!
