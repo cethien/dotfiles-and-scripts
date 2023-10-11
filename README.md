@@ -28,7 +28,7 @@ prepare `.wingetupdate` file
 
 ```powershell
 git init
-git remote add origin git@github.com:cethien/dotfiles-and-scripts.git
+git remote add origin https://github.com/cethien/dotfiles-and-scripts.git
 git fetch
 git reset --hard origin/win
 git pull --set-upstream origin win
@@ -72,7 +72,7 @@ config.ini
 
 ```bash
 git init
-git remote add origin git@github.com:cethien/dotfiles-and-scripts.git
+git remote add origin https://github.com/cethien/dotfiles-and-scripts.git
 git fetch
 git reset --hard origin/wsl-deb
 git pull --set-upstream origin wsl-deb
