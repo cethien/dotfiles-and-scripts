@@ -32,9 +32,7 @@ git remote add origin https://github.com/cethien/dotfiles-and-scripts.git
 git fetch
 git reset --hard origin/win
 git pull --set-upstream origin win
-```
 
-```powershell
 . "$env:USERPROFILE/scripts/setup.ps1" <parmeters>
 ```
 
@@ -75,8 +73,6 @@ git remote add origin https://github.com/cethien/dotfiles-and-scripts.git
 git fetch
 git reset --hard origin/wsl-deb
 git pull --set-upstream origin wsl-deb
-```
 
-```powershell
-. ~/scripts/setup.sh
+. $HOME/scripts/setup.sh
 ```
