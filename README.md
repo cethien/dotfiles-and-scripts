@@ -2,29 +2,32 @@
 
 i'm a nerd :nerd_face:
 
-## Stuff
+## Commands
 
-### justfiles
+| OS    | Command          | Description                            |
+| ----- | ---------------- | -------------------------------------- |
+| 🪟 🐧 | `reload`         | reloads shell profile                  |
+| 🪟 🐧 | `update`         | execute package/app updates            |
+| 🪟    | `update-spotify` | update spicetify                       |
+| 🐧    | `update-dotnet`  | update dotnet sdk version to 'latest'  |
+| 🐧    | `update-go`      | update go sdk version to 'latest'      |
+| 🐧    | `init-go-web`    | creates a go web project from template |
+| 🐧    | `init-go-web`    | creates a go web project from template |
 
-each home dir has a justfile.
+## Git
 
-Check out list of commands with:
+| Type    | Command      | Description/Value                                 |
+| ------- | ------------ | ------------------------------------------------- |
+| command | `git ignore` | fetches ignore file: `git ignore go > .gitignore` |
+| alias   | `ga`         | `git add`                                         |
+| alias   | `gaf`        | `git add -f`                                      |
+| alias   | `gc`         | `git commit -m`                                   |
+| alias   | `gf`         | `git fetch`                                       |
+| alias   | `gr`         | `git reset --hard`                                |
 
-```sh
-just
-```
+## Scripts
 
-## Windows
-
-### Update
-
-prepare `.wingetupdate` file
-
-```powershell
-. "$env:USERPROFILE/scripts/update.ps1"
-```
-
-### Setup
+### Setup (Windows)
 
 ```powershell
 git init
@@ -33,19 +36,31 @@ git fetch
 git reset --hard origin/win
 git pull --set-upstream origin win
 
-. "$env:USERPROFILE/scripts/setup.ps1" <parmeters>
+. "$env:USERPROFILE/scripts/setup.ps1" -Profiles <profiles>
 ```
 
-| Parameter    | Description                             |
-| ------------ | --------------------------------------- |
-| -Customizing | customization stuff                     |
-| -Personal    | some stuff on a personal desktop        |
-| -Ssh         | generate a new ssh key. uses ssh-keygen |
-| -Development | development stuff                       |
-| -Gaming      | games & launchers                       |
-| -Streaming   | streaming stuff                         |
+| Profile       | Description                      |
+| ------------- | -------------------------------- |
+| `customizing` | customization stuff              |
+| `home`        | some stuff on a personal desktop |
+| `dev`         | development stuff                |
+| `gaming`      | games & launchers                |
 
-### Create folder backup
+### Setup (WSL Ubuntu/Debian)
+
+```bash
+git init -b wsl-deb
+git remote add origin https://github.com/cethien/dotfiles-and-scripts.git
+git fetch
+git reset --hard origin/wsl-deb
+git pull --set-upstream origin wsl-deb
+
+. $HOME/scripts/setup.sh
+```
+
+dont forget to set git username and email for repo!
+
+### Create folder backup (Windows)
 
 useful script for backing up folders
 
@@ -63,18 +78,3 @@ folder1\
 folder2\
 config.ini
 ```
-
-## WSL Debian
-
-### Setup
-```bash
-git init -b wsl-deb
-git remote add origin https://github.com/cethien/dotfiles-and-scripts.git
-git fetch
-git reset --hard origin/wsl-deb
-git pull --set-upstream origin wsl-deb
-
-. $HOME/scripts/setup.sh
-```
-
-dont forget to set git username and email for repo!
