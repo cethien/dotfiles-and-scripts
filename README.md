@@ -7,23 +7,14 @@ i'm a nerd :nerd_face:
 | OS    | Command          | Description                            |
 | ----- | ---------------- | -------------------------------------- |
 | 🪟 🐧 | `reload`         | reloads shell profile                  |
-| 🪟 🐧 | `update`         | execute package/app updates            |
-| 🪟    | `update-spotify` | update spicetify                       |
-| 🐧    | `update-dotnet`  | update dotnet sdk version to 'latest'  |
-| 🐧    | `update-go`      | update go sdk version to 'latest'      |
-| 🐧    | `init-go-web`    | creates a go web project from template |
-| 🐧    | `init-go-web`    | creates a go web project from template |
+| 🪟 🐧 | `update`         | execute updates            |
+| 🐧    | `init`    | creates a project from template |
 
 ## Git
 
 | Type    | Command      | Description/Value                                 |
 | ------- | ------------ | ------------------------------------------------- |
 | command | `git ignore` | fetches ignore file: `git ignore go > .gitignore` |
-| alias   | `ga`         | `git add`                                         |
-| alias   | `gaf`        | `git add -f`                                      |
-| alias   | `gc`         | `git commit -m`                                   |
-| alias   | `gf`         | `git fetch`                                       |
-| alias   | `gr`         | `git reset --hard`                                |
 
 ## Scripts
 
