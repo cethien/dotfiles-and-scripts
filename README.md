@@ -39,7 +39,7 @@ git pull --set-upstream origin win
 
 ### Setup (WSL Ubuntu/Debian)
 
-```bash
+```sh
 git init -b wsl-deb
 git remote add origin https://github.com/cethien/dotfiles-and-scripts.git
 git fetch
